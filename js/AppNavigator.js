@@ -20,7 +20,8 @@ import Sensor from './components/sensor';
 import Snapshot from './components/snapShot';
 import Location from './components/location';
 import KeekAwake from './components/keepAwake';
-
+import KeekAway from './components/keepAway';
+import Constant from './components/constant';
 
 const RouterWithRedux = connect()(Router);
 
@@ -42,6 +43,9 @@ class AppNavigator extends Component {
             <Scene key="permission" component={Permission} />
             <Scene key="glogin" component={Glogin} />
             <Scene key="snapshot" component={Snapshot} />
+            <Scene key="keepAwake" component={KeekAwake} />
+            <Scene key="keepAway" component={KeekAway} />
+            <Scene key="constant" component={Constant} />
           </Scene>
         </RouterWithRedux>
     );

@@ -24,7 +24,7 @@ export default class Snapshot extends Component {
  
     render() {
       async function getSnap(){
-        Expo.takeSnapshotAsync(2, {
+        Expo.takeSnapshotAsync(1,{
           format: 'jpeg',
           quality: 1,
           result: 'file',

@@ -40,7 +40,7 @@ export default class Contact extends Component {
              <Container>
                 <Header>
                     <Left>
-                        <Button transparent>
+                        <Button transparent onPress={() => Actions.pop()}>
                             <Icon name='arrow-back' />
                         </Button>
                     </Left>

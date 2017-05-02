@@ -84,6 +84,36 @@ class Home extends Component {
                   <Text style={styles.text}>Sensor Test</Text>
                 </TouchableOpacity>
               </Row>
+               <Row>
+                <TouchableOpacity
+                  style={styles.row}
+                  onPress={() => Actions.contact()} >
+                  <Text style={styles.text}>Get Contact</Text>
+                </TouchableOpacity>
+              </Row>
+               <Row>
+                <TouchableOpacity
+                  style={styles.row}
+                  onPress={() => Actions.snapshot()} >
+                  <Text style={styles.text}>Get Snapshot</Text>
+                </TouchableOpacity>
+              </Row>
+
+               <Row>
+                <TouchableOpacity
+                  style={styles.row}
+                  onPress={() => Actions.snapshot()} >
+                  <Text style={styles.text}>Stay Awake</Text>
+                </TouchableOpacity>
+              </Row>
+
+               <Row>
+                <TouchableOpacity
+                  style={styles.row}
+                  onPress={() => Actions.snapshot()} >
+                  <Text style={styles.text}>Get Snapshot</Text>
+                </TouchableOpacity>
+              </Row>
            
          
         </Content>
