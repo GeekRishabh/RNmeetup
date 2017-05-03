@@ -42,7 +42,7 @@ export default class Snapshot extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title> Facebook </Title>
+                        <Title> SnapShot </Title>
                     </Body>
                     <Right />
                 </Header>

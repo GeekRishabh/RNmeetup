@@ -13,16 +13,13 @@ import { Container, Header, Title, Content, Button, Left, Right, Body, Icon, Sep
 const { width, height } = Dimensions.get('window');
 
 export default class Contact extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            Component: null,
-        };
-    }
-
+     async componentWillMount() {
+    const token = await Expo.Permissions.CONTACTS();
+    console.log('contact permission', token)
+  }
     render() {
       async function getContact() {
+        const { status } = await Expo.Permissions.getAsync(Permissions.CONTACTS);
         const contacts = await Expo.Contacts.getContactsAsync([
           Expo.Contacts.PHONE_NUMBERS,
           Expo.Contacts.EMAILS,

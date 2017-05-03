@@ -14,14 +14,10 @@ import { Container, Header, Title, Content, Button, Left, Right, Body, Icon, Sep
 const { width, height } = Dimensions.get('window');
 
 export default class Location extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            Component: null,
-        };
-    }
- 
+    async componentWillMount() {
+    const token = await Expo.Permissions.LOCATION();
+    console.log('location permission', token)
+  }
    render() {
       function getLocation () {
            Expo.Location.getCurrentPositionAsync({enableHighAccuracy: true})
@@ -36,7 +32,7 @@ export default class Location extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title> location </Title>
+                        <Title> Location </Title>
                     </Body>
                     <Right />
                 </Header>

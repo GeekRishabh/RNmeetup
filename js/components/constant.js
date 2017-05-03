@@ -15,17 +15,13 @@ import { Actions, ActionConst } from 'react-native-router-flux';
 const { width, height } = Dimensions.get('window');
 
 export default class Constant extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            Component: null,
-        };
-    }
  
     render() {
         async function getConstants() {
-       
+            const deviceId = Expo.Constants.deviceId;
+            const deviceName =Expo.Constants.deviceName;
+            const platform =Expo.Constants.platform;
+            Alert.alert(deviceId);
         }
         return ( 
             <Container>
